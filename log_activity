@@ -32,7 +32,10 @@ def scrape_stats(db, host, token, interval):
         active = bool(user['server'] and last_activity > threshold)
         if active:
             total_active += 1
-            print(name, end=' ')
+            if total_active < 10:
+                print(name, end=' ')
+            elif total_active == 10:
+                print('...', end=' ')
         db.execute("INSERT INTO activity VALUES (?, ?, ?)",
             (now, name, active)
         )
