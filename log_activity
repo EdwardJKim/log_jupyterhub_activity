@@ -64,9 +64,9 @@ if __name__ == '__main__':
     opts = parser.parse_args()
     
     try:
-        token = os.environ['JPY_API_TOKEN']
+        token = os.environ['JUPYTERHUB_API_TOKEN']
     except KeyError:
-        print("Need JPY_API_TOKEN env. Create a token with `jupyterhub token [admin_user]`", file=sys.stderr)
+        print("Need JUPYTERHUB_API_TOKEN env. Create a token with `jupyterhub token [admin_user]`", file=sys.stderr)
         sys.exit(1)
     
     interval = opts.interval

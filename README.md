@@ -2,7 +2,7 @@
 
 Create an API token for an admin user of the Hub:
 
-    export JPY_API_TOKEN=`jupyterhub token [admin_user]`
+    export JUPYTERHUB_API_TOKEN=`jupyterhub token [admin_user]`
 
 Run the script:
 
